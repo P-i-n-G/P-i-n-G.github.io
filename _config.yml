@@ -1,0 +1,38 @@
+title: P.i.n.G
+description: "P.i.n.G CTF Team"
+author:
+  name: "Persatuan Intel Negara Gaijin"
+  email: "team@xxxx"
+  url: "https://xxxx"
+
+baseurl: /
+
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 100000000000
+paginate_path: /page/:num/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+collections:
+  - members
+  - events
+
+future: true
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-menus
+
+
+# Custom variables
+owner : "P.i.n.G"
+year : "2020"
