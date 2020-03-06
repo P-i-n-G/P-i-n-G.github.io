@@ -12,7 +12,7 @@ title: Events
 
     <div id="{{ event.name }}" style='display: none'>
     {% if event.image-team %}
-      <h3 class="event_subtitle">T35H Team:</h3>
+      <h3 class="event_subtitle">our Team:</h3>
       <img src="{{ event.images-path }}{{ event.image-team }}" />
     {% endif %}
 
