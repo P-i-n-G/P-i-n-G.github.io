@@ -1,5 +1,5 @@
 ---
-name: Fariq Fadilah Gusti Insani
+name: Fariq
 logo: images/member.jpg
 specialties: Web Exploitation | Cryptography
 ---
