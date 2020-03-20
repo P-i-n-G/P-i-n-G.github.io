@@ -2,34 +2,6 @@
 layout: default
 ---
 
-{% assign years = '' | split: '' %}
-{% assign ctfs = '' | split: '' %}
-{% assign zzzzzzzzzzzzzzzzzz = '' | split: '' %}
-{% assign ctfd = '' | split: '' %}
-{% assign delim = ',' | split: '' %}
-
-{% for post in paginator.posts %}
-    <!--
-    <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
-    -->
-
-    {% unless zzzzzzzzzzzzzzzzzz contains post.year %}
-        {% assign year = post.year | split: '' %}
-        {% assign years = years | concat: year | concat: delim | join: '' %}
-    {% endunless %}
-        {% assign zzzzzzzzzzzzzzzzzz = years | split: ',' %}
-
-    {% unless ctfd contains post.ctf %}
-        {% assign ctf = post.ctf | split: '' %}
-        {% assign ctfs = ctfs | concat: ctf | concat: delim | join: ''%}
-    {% endunless %}
-        {% assign ctfd = ctfs | split: ',' %}
-
-{% endfor %}
-
-{% assign years = years | split: ',' | sort | reverse %}
-{% assign ctfs = ctfs | split: ',' %}
-{% assign test = false %}
 
 <h1 align="center"><b>Persatuan Intel Negara Gaijin</b></h1>
 <img src="images/logo.png" alt="logo" class="center">
