@@ -33,46 +33,4 @@ layout: default
 
 <h1 align="center"><b>Writeups</b></h1>
 
-
-{% for year in years %}
-  <h1>{{ year }}: </h1>
-  {% for ctf in ctfs %}
-    {% for post in paginator.posts %}
-      {% if post.year == year and post.ctf == ctf %}
-        {% assign test = true %}
-      {% endif %}
-    {% endfor %}
-    {% if test == true %}
-    <h2 class="cliquable">_{{ ctf }}</h2>
-      <ul class="retractable">
-      {% for post in paginator.posts %}
-        {% if post.year == year and post.ctf == ctf %}
-      <li>
-	  <h3>
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-	  </h3>
-      </li>
-
-	{% endif %}
-      {% endfor %}
-      </ul>
-    {% endif %}
-    {% assign test = false %}
-  {% endfor %}
-{% endfor %}
-
-
-<style>
-.cliquable {
-  color: #63c0f5;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.retractable {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-</style>
 <script src="/js/menu.js"></script>
