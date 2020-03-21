@@ -8,11 +8,15 @@ published: true
 
 # Web Exploitation (Author : sawontene.)
 
-![Soal Stromeo](/web/stromeo-soal.png)
+<p align="center">
+  <img src="/web/stromeo-soal.png" alt="soal stromeo">
+</p>
 
 Diberikan sebuah link dan file httpd.zip. Setelah kami analisa terdapat clue pada header, dimana web tersebut menggunakan server **Nostromo 1.9.6** yang memiliki Vulnerability terhadap Remote Code Execution (CVE-2019-16278).
 
-![Nostromo](/web/nostromo.png)
+<p align="center">
+  <img src="/web/nostromo.png" alt="nostromo">
+</p>
 
 Kami mencoba eksploitasi menggunakan [script python](https://github.com/sudohyak/exploit/blob/master/CVE-2019-16278/exploit.py) namun mendapat respon 400 Bad request.
 
@@ -45,6 +49,8 @@ kemudian kita ubah payload **/bin/sh** dengan menambahkan **%0d** sehingga menja
 
 dan setelah kita mencoba menjalankan script tersebut kembali, benar saja filter tersebut berhasil terbypass.
 
-![Eksploitasi Nostromo](./web/nostromo-rce.png)
+<p align="center">
+  <img src="/web/nostromo-rce.png" alt="nostromo rce">
+</p>
 
 `Flag: UNITY2020{Bj1r_CVE-2019-16278_M00m3nt}` 
